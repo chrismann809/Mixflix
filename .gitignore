@@ -20,16 +20,10 @@
 /node_modules
 /yarn-error.log
 
-node_modules/
-bundle.js*
-/public/assets/
-
-Mixflix/
-
 /public/assets
 .byebug_history
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-/app/assets/javascripts/bundle.js
+bundle.js*
