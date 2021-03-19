@@ -3,13 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .landing-back-img {
+    top: 0;
+    left: 0;
     position: absolute;
     object-fit: cover;
-    width: 100.8%;
+    width: 101%;
     height: 100.9%;
-    z-index: 0;
-    margin: -20px;
+    z-index: -2;
+    margin: -15px;
 }
+
 
 #login {
     position: absolute;
@@ -131,43 +134,36 @@
 }
 
 .landing-back-gradient {
-    margin: -20px;
-    object-fit: cover;
+    top: 0;
+    left: 0;
     position: absolute;
-    width: 100.8%;
+    object-fit: cover;
+    width: 101%;
     height: 100.9%;
+    z-index: -2;
+    margin: -15px;
     background: rgba(0,0,0,.4);background-image: -o-linear-gradient(bottom,rgba(0,0,0,.8) 0,rgba(0,0,0,0) 60%,rgba(0,0,0,.8) 100%);
     background-image: linear-gradient(to top,rgba(0,0,0,.8) 0,rgba(0,0,0,0) 60%,rgba(0,0,0,.8) 100%);
-    z-index: 0;
 }
 
-
-
-
-
-
-.login-form-box {
-    top: 390px;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    width: 450px;
-    height: 600px;
-    background-color: rgba(0,0,0,.75);
+#demo-btn {
     position: absolute;
-    border-radius: 7px;
-}
-
-.login-form {
-    margin-left: 50px;
-}
-
-.session-input input {
-    background-color: #333;
-    color: white;
-}
-
-.session-submit {
+    right: 150px;
+    top: 20px;
+    z-index: 1;
     background-color: #e50914;
+    width: 110px;
+    height: 37px;
+    text-align: center;
     color: white;
+    text-decoration-color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    line-height: 37px;
+    border: none;
+    font-size: 16px;
+}
+
+#demo-btn:focus {
+    outline: none;
 }

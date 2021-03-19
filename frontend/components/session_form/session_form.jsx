@@ -36,14 +36,12 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    return (
-        <div className="login-form-container">
-        <Link to="/"><img className="landing-logo" src="https://i.imgur.com/CA5t28a.png"/></Link>
-        <img className="landing-back-img" src="https://assets.nflxext.com/ffe/siteui/vlv3/c43f3cc0-6f02-4b8a-9470-7b1732eb937d/3d037465-1692-41b0-84a8-073ccb74255f/US-en-20210315-popsignuptwoweeks-perspective_alpha_website_large.jpg" alt=""/>
-        <div className="landing-back-gradient"></div>
+    const loginForm = (
+      <div className="login-form-container">
+        <img className="landing-back-img" src="https://i.imgur.com/BuTGdhU.png" alt=""/>
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <div className="login-form">
-            <h1>{this.props.formType === 'login' ? "Sign In" : "Sign Up"}</h1>
+            <h1>{"Sign In"}</h1>
             <br/>
             <div className="session-input">
               <input type="text"
@@ -61,11 +59,45 @@ class SessionForm extends React.Component {
               />
             </div>
             <br/>
-            <input className="session-submit" type="submit" value={this.props.formType} />
+            <input className="session-submit" type="submit" value={"Sign In"} />
+            <p className="login-new">New to Netflix? <Link to="/">Sign up now</Link>.</p>
           </div>
         </form>
       </div>
-    );
+    )
+
+    const signupForm = (
+      <div className="signup-form-container">
+        <div className="signup-back"></div>
+        <form onSubmit={this.handleSubmit} className="signup-form-box">
+          <div className="signup-form">
+            <div className="signup-text">
+              <h2>Create a password to start your membership.</h2>
+              <p>Just a few more steps and you're done!</p>
+              <p>We hate paperwork, too.</p>
+            </div>
+            <div className="signup-input">
+              <input type="text"
+                placeholder="Email"
+                value={this.state.username}
+                onChange={this.update('username')}
+                className="signup-input"
+              />
+              <br/>
+              <input type="password"
+                placeholder="Add a password"
+                value={this.state.password}
+                onChange={this.update('password')}
+                className="signup-input"
+              />
+            </div>
+            <br/>
+            <input className="signup-submit" type="submit" value="Continue" />
+          </div>
+        </form>
+      </div>
+    )
+    return this.props.formType === 'login' ? (loginForm) : (signupForm);
   }
 }
 

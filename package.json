@@ -44,5 +44,19 @@
   "bugs": {
     "url": "https://github.com/chrismann809/MixFlix/issues"
   },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-proposal-class-properties",
+        {
+          "loose": true
+        }
+      ]
+    ]
+  },
   "homepage": "https://github.com/chrismann809/MixFlix#readme"
 }

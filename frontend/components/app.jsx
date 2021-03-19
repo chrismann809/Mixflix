@@ -1,20 +1,26 @@
 import React from 'react';
-import LandingPageContainer from './landing_page/landing_page_container';
+import NavBarContainer from './nav_bar/nav_bar_container';
 import LoginFormContainer from '../components/session_form/login_form_container';
 import SignupFormContainer from '../components/session_form/signup_form_container';
+import LandingPage from '../components/landing_page/landing_page'
+import BrowseContainer from '../components/browse/browse_container'
+
 import { Route, Switch } from 'react-router';
 
-import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import { AuthRoute, ProtectedRoute, RedirectRoute } from '../util/route_util';
 
 const App = () => (
     <div>
         <header>
-            {/* <LandingPageContainer /> */}
+            <Switch>
+                <NavBarContainer />
+            </Switch>
         </header>
         <Switch>
-            <Route exact path="/" component={LandingPageContainer} />
+            <RedirectRoute exact path="/" component={LandingPage} />
             <AuthRoute exact path="/login" component={LoginFormContainer}/>
             <AuthRoute exact path="/signup" component={SignupFormContainer}/>
+            <ProtectedRoute exact path="/browse" component={BrowseContainer}/>
         </Switch>
     </div>
 );

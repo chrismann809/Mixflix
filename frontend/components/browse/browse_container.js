@@ -1,11 +1,12 @@
 import { connect } from 'react-redux';
 
 import { logout } from '../../actions/session_actions';
-import LandingPage from './landing_page';
+import Browse from './browse';
 
-const mapStateToProps = ({ session, entities: { users } }) => {
+const mapStateToProps = ({ session, entities: { users } }, ownProps) => {
   return {
-    currentUser: users[session.id]
+    currentUser: users[session.id],
+    currentPage: ownProps.location.pathname
   };
 };
 
@@ -16,4 +17,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(LandingPage);
+)(Browse);

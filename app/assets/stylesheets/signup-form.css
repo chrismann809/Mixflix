@@ -1,0 +1,99 @@
+.signup-back {
+    position: absolute;
+    background-color: white;
+    top: 0;
+    left: 0;
+    height: 675px;
+    width: 100%;
+}
+
+.signup-form-box {
+    top: 440px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 600px;
+    position: absolute;
+    border-radius: 7px;
+    color: black;
+    margin-left: -45px;
+}
+
+.signup-form {
+    margin-left: 50px;
+}
+
+.signup-submit {
+    background-color: #e50914;
+    color: white;
+}
+
+.signup-logo {
+    position: absolute;
+    z-index: 1;
+    width: 165px;
+    height: auto;
+    top: 20px;
+    left: 3%;
+}
+
+#signup-login #login-btn, #signup-login #login-btn:link, #signup-login #login-btn:visited,
+#signup-login #login-btn:focus, #signup-login #login-btn:hover, #signup-login #login-btn:active{
+    color:black;
+    text-decoration:none; 
+    cursor: pointer;
+ }
+
+ #signup-login {
+    position: absolute;
+    right: 3%;
+    top: 25px;
+    z-index: 1;
+    width: 75px;
+    height: 37px;
+    text-align: center;
+    border-radius: 5px;
+    line-height: 37px;
+    background-color: none;
+    font-weight: bold;
+    font-size: 19px;
+ }
+
+.signup-nav {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 90px;
+    width: 100%;
+    z-index: 1;
+    border-bottom: 1px solid lightgray;
+}
+
+.signup-text h2 {
+    margin-bottom: 25px;
+    margin-top: 5px;
+    font-size: 22px;
+}
+
+.signup-text p {
+    margin-top: -15px;
+    font-size: 19px;
+}
+
+.signup-input {
+    margin-top: -5px;
+}
+.signup-input input {
+    width: 420px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.signup-form input[type=submit] {
+    width: 427px;
+    height: 50px;
+    border: none;
+    font-size: 17px;
+    margin-top: -5px;
+}
