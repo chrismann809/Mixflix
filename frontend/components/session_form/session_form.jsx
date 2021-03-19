@@ -42,7 +42,6 @@ class SessionForm extends React.Component {
         <img className="landing-back-img" src="https://assets.nflxext.com/ffe/siteui/vlv3/c43f3cc0-6f02-4b8a-9470-7b1732eb937d/3d037465-1692-41b0-84a8-073ccb74255f/US-en-20210315-popsignuptwoweeks-perspective_alpha_website_large.jpg" alt=""/>
         <div className="landing-back-gradient"></div>
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          {this.renderErrors()}
           <div className="login-form">
             <h1>{this.props.formType === 'login' ? "Sign In" : "Sign Up"}</h1>
             <br/>
