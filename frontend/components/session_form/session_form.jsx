@@ -60,7 +60,7 @@ class SessionForm extends React.Component {
             </div>
             <br/>
             <input className="session-submit" type="submit" value={"Sign In"} />
-            <p className="login-new">New to Netflix? <Link to="/">Sign up now</Link>.</p>
+            <p className="login-new">New to Mixflix? <Link to="/">Sign up now</Link>.</p>
           </div>
         </form>
       </div>
