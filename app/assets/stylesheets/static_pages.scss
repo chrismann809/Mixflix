@@ -60,13 +60,13 @@
     font-size: 20px;
 }
 
-#signup div {
+#signup div form {
     display: flex;
     flex-direction: row;
     width: 100%;
 }
 
-#signup div textarea {
+.landing-email-input {
     font-family: Arial, Helvetica, sans-serif;
     resize: none;
     width: 90%;
@@ -78,12 +78,12 @@
     border-bottom-left-radius: 5px;
 }
 
-#signup div textarea:focus {
+.landing-email-input:focus {
     outline: none !important;
 }
 
-#signup div textarea:focus ~ .email-label,
-#signup div textarea:focus ~ .email-label {
+.landing-email-input:focus ~ .email-label,
+.landing-email-input:focus ~ .email-label {
     // top: 80px;
     // bottom: 10px;
     margin-top: 5px;
@@ -101,10 +101,10 @@
     color: gray;
 }
 
-#signup-link {
+.landing-email-submit {
+    margin-top: 1px;
     background-color: #e50914;
     width: 200px;
-    height: 37px;
     text-align: center;
     color: white;
     text-decoration-color: white;
@@ -112,13 +112,11 @@
     border-bottom-right-radius: 5px;
     text-decoration: none;
     line-height: 60px;
-    height: 60px;
+    height: 59px;
     font-size: 20px;
+    border: none
 }
 
-#signup-link {
-    background-color: #e50914;
-}
 
 #signup Link:hover {
     cursor: pointer;

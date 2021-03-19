@@ -4,10 +4,20 @@ import { Link } from 'react-router-dom';
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
+    
+    let email = "";
+
+    if (props.landingProps) {
+      email = props.landingProps.username;
+    } else {
+      email = "";
+    }
+
     this.state = {
-      username: '',
+      username: email,
       password: ''
     };
+
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -42,21 +52,26 @@ class SessionForm extends React.Component {
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <div className="login-form">
             <h1>{"Sign In"}</h1>
+            {this.props.errors.length > 0 ? <p className="login-error"><strong>Incorrect password.</strong> Please try again or you can <u>reset your password.</u></p> : ""}
             <br/>
             <div className="session-input">
-              <input type="text"
-                placeholder="Email address"
-                value={this.state.username}
-                onChange={this.update('username')}
-                className="login-input"
-              />
+              <div>
+                <input type="text"
+                  value={this.state.username ||= this.state.email}
+                  onChange={this.update('username')}
+                  className="login-input"
+                />
+                <span className="login-email-label">Email</span>
+              </div>
               <br/>
-              <input type="password"
-                placeholder="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="login-input"
-              />
+              <div>
+                <input type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  className="login-input"
+                />
+                <span className="login-password-label">Password</span>
+              </div>
             </div>
             <br/>
             <input className="session-submit" type="submit" value={"Sign In"} />
