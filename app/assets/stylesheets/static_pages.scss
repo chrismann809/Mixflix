@@ -1,0 +1,173 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.landing-back-img {
+    position: absolute;
+    object-fit: cover;
+    width: 100.8%;
+    height: 100.9%;
+    z-index: 0;
+    margin: -20px;
+}
+
+#login {
+    position: absolute;
+    right: 50px;
+    top: 20px;
+    z-index: 1;
+    background-color: #e50914;
+    width: 75px;
+    height: 37px;
+    text-align: center;
+    color: white;
+    text-decoration-color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    line-height: 37px;
+}
+
+#login:hover {
+    cursor: pointer;
+}
+
+#signup {
+    position: fixed;
+    top: 375px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    text-align: center;
+    width: 650px;
+}
+
+#signup h1 {
+    width: 650px;
+    font-size: 60px;
+}
+
+#signup p:nth-child(2) {
+    margin-top: -30px;
+    font-size: 27px;
+}
+
+#signup p:nth-child(3) {
+    font-size: 20px;
+}
+
+#signup div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#signup div textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    resize: none;
+    width: 90%;
+    line-height: 55px;
+    font-size: 17px;
+    text-indent: 15px;
+    height: 55px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#signup div textarea:focus {
+    outline: none !important;
+}
+
+#signup div textarea:focus ~ .email-label,
+#signup div textarea:focus ~ .email-label {
+    // top: 80px;
+    // bottom: 10px;
+    margin-top: 5px;
+    left: 17px;
+    font-size: 12px;
+    opacity: 1;
+}
+
+.email-label {
+    position: absolute;
+    pointer-events: none;
+    margin-top: 20px;
+    left: 20px;
+    transition: 0.2s ease all;
+    color: gray;
+}
+
+#signup-link {
+    background-color: #e50914;
+    width: 200px;
+    height: 37px;
+    text-align: center;
+    color: white;
+    text-decoration-color: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-decoration: none;
+    line-height: 60px;
+    height: 60px;
+    font-size: 20px;
+}
+
+#signup-link {
+    background-color: #e50914;
+}
+
+#signup Link:hover {
+    cursor: pointer;
+}
+
+.landing-logo {
+    position: absolute;
+    z-index: 1;
+    width: 13%;
+    height: auto;
+    top: 25px;
+    left: 40px;
+}
+
+.landing-back-gradient {
+    margin: -20px;
+    object-fit: cover;
+    position: absolute;
+    width: 100.8%;
+    height: 100.9%;
+    background: rgba(0,0,0,.4);background-image: -o-linear-gradient(bottom,rgba(0,0,0,.8) 0,rgba(0,0,0,0) 60%,rgba(0,0,0,.8) 100%);
+    background-image: linear-gradient(to top,rgba(0,0,0,.8) 0,rgba(0,0,0,0) 60%,rgba(0,0,0,.8) 100%);
+    z-index: 0;
+}
+
+
+
+
+
+
+.login-form-box {
+    top: 390px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 600px;
+    background-color: rgba(0,0,0,.75);
+    position: absolute;
+    border-radius: 7px;
+}
+
+.login-form {
+    margin-left: 50px;
+}
+
+.session-input input {
+    background-color: #333;
+    color: white;
+}
+
+.session-submit {
+    background-color: #e50914;
+    color: white;
+}
