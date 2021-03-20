@@ -48,7 +48,7 @@ class SessionForm extends React.Component {
   render() {
     const loginForm = (
       <div className="login-form-container">
-        <img className="landing-back-img" src="https://i.imgur.com/BuTGdhU.png" alt=""/>
+        <img className="login-back-img" src="https://i.imgur.com/BuTGdhU.png" alt=""/>
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <div className="login-form">
             <h1>{"Sign In"}</h1>
@@ -60,6 +60,7 @@ class SessionForm extends React.Component {
                   value={this.state.username ||= this.state.email}
                   onChange={this.update('username')}
                   className="login-input"
+                  required
                 />
                 <span className="login-email-label">Email</span>
               </div>
@@ -69,6 +70,7 @@ class SessionForm extends React.Component {
                   value={this.state.password}
                   onChange={this.update('password')}
                   className="login-input"
+                  required
                 />
                 <span className="login-password-label">Password</span>
               </div>

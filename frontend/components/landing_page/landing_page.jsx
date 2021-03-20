@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 
-
+import { HiOutlineChevronRight } from 'react-icons/hi'
 
 class LandingPage extends React.Component {
   constructor(props) {
@@ -45,9 +45,10 @@ class LandingPage extends React.Component {
               
               <div>
                 <form onSubmit={this.handleSubmit}>
-                  <input className='landing-email-input' type='text' onChange={this.update('username')} />
+                  <input className='landing-email-input' type='text' onChange={this.update('username')} required/>
                   <span className="email-label">Email address</span>
-                  <input className='landing-email-submit' type="submit" value={"Get Started >"} />
+                  <input className='landing-email-submit' type="submit" value={`Get Started`} /> 
+                  <HiOutlineChevronRight className='chevron' />
                 </form>
               </div>
           </nav>

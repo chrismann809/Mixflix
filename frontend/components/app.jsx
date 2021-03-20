@@ -2,8 +2,9 @@ import React from 'react';
 import NavBarContainer from './nav_bar/nav_bar_container';
 import LoginFormContainer from '../components/session_form/login_form_container';
 import SignupFormContainer from '../components/session_form/signup_form_container';
-import LandingPage from '../components/landing_page/landing_page'
-import BrowseContainer from '../components/browse/browse_container'
+import LandingPage from '../components/landing_page/landing_page';
+import BrowseContainer from '../components/browse/browse_container';
+import InfoBarContainer from '../components/info_bar/info_bar_container';
 
 import { Route, Switch } from 'react-router';
 
@@ -22,6 +23,11 @@ const App = () => (
             <AuthRoute exact path="/signup" component={SignupFormContainer}/>
             <ProtectedRoute exact path="/browse" component={BrowseContainer}/>
         </Switch>
+        <footer>
+            <Switch>
+                <InfoBarContainer />
+            </Switch>
+        </footer>
     </div>
 );
 

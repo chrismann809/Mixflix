@@ -85,6 +85,12 @@
     font-size: 10px;
 }
 
+.session-input input[type=text]:valid ~ .login-email-label {
+    top: -15px;
+    left: -304px;
+    font-size: 10px;
+}
+
 .session-input input[type=password] ~ .login-password-label {
     transition: top .7s ease;
     position: relative;
@@ -98,6 +104,12 @@
     font-size: 10px;
 }
 
+.session-input input[type=password]:valid ~ .login-password-label {
+    top: -15px;
+    left: -304px;
+    font-size: 10px;
+}
+
 .login-error {
     background-color: #e87c03;
     width: 292px;
@@ -106,4 +118,15 @@
     padding-right: 16px;
     font-size: 15px;
     border-radius: 5px;
+}
+
+.login-back-img {
+    top: 0;
+    left: 0;
+    position: absolute;
+    object-fit: cover;
+    width: 101%;
+    height: 102%;
+    z-index: -2;
+    margin: -15px;
 }
