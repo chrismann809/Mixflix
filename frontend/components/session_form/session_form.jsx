@@ -77,7 +77,7 @@ class SessionForm extends React.Component {
             </div>
             <br/>
             <input className="session-submit" type="submit" value={"Sign In"} />
-            <p className="login-new">New to Mixflix? <Link to="/">Sign up now</Link>.</p>
+            <p className="login-new">New to Mixflix? <Link id="login-signup-link" to="/">Sign up now</Link>.</p>
           </div>
         </form>
       </div>
@@ -94,19 +94,25 @@ class SessionForm extends React.Component {
               <p>We hate paperwork, too.</p>
             </div>
             <div className="signup-input">
-              <input type="text"
-                placeholder="Email"
-                value={this.state.username}
-                onChange={this.update('username')}
-                className="signup-input"
-              />
+              <div className="signup-email-input">
+                <input type="text"
+                  value={this.state.username}
+                  onChange={this.update('username')}
+                  className="signup-input"
+                  required
+                />
+                <span className="signup-email-label">Email</span>
+              </div>
               <br/>
-              <input type="password"
-                placeholder="Add a password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="signup-input"
-              />
+              <div className="signup-password-input">
+                <input type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  className="signup-input"
+                  required
+                />
+                <span className="signup-password-label">Password</span>
+              </div>
             </div>
             <br/>
             <input className="signup-submit" type="submit" value="Continue" />

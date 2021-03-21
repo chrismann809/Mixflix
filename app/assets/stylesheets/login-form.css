@@ -130,3 +130,7 @@
     z-index: -2;
     margin: -15px;
 }
+
+#login-signup-link:hover {
+    text-decoration: underline;
+}
