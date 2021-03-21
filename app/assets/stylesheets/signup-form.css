@@ -112,7 +112,7 @@
     background-color: rgb(248, 248, 248);
 }
 
-.session-input input[type=text]signup-email-label {
+.session-input input[type=text] ~ .signup-email-label {
     transition: top .7s ease;
     position: relative;
     top: 2px;
