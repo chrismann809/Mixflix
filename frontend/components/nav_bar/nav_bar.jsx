@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { FaSearch } from 'react-icons/fa'
+import { RiArrowDownSFill } from 'react-icons/ri'
+import { SiNetflix, SiGithub, SiLinkedin } from 'react-icons/si'
 
 
 const NavBar = ({currentUser, currentPage, logout, processForm}) => {
@@ -31,14 +33,37 @@ const NavBar = ({currentUser, currentPage, logout, processForm}) => {
     </div>
   )
 
-  const personalGreeting = () => (
-    <hgroup className="header-group">
+  const loggedIn = () => (
+    <div className="logged-in-nav">
+      <div className="nav-left">
+        <Link to="/"><img className="logged-in-logo" src="https://i.imgur.com/CA5t28a.png"/></Link>
+        <div className="page-nav">
+          <div id="home-link">{currentPage === "/browse" ? <strong>Home</strong> : <Link to="/browse">Home</Link> }</div>
+          <div id="my-list-link">{currentPage === "/browse/my-list" ? <strong>My List</strong> : <Link to="/browse/my-list">My List</Link> }</div>
+        </div>
+      </div>
+      <div className="nav-right">
+        <FaSearch id="search-icon"/>
+        <div className="profile-dropdown">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"/>
+          <RiArrowDownSFill id="dropdown-arrow"/>
+          <div className="profile-dropdown-content">
+            <div className="profile-links">
+              <a href="http://netflix.com/" id="profile-netflix-link"><div><SiNetflix id="profile-netflix-logo"/><p>Netflix</p></div></a>
+              <a href="http://github.com/chrismann809/" id="profile-github-link"><div><SiGithub id="profile-github-logo"/><p>GitHub</p></div></a>
+              <a href="http://linkedin.com/" id="profile-linkedin-link" ><div><SiLinkedin id="profile-linkedin-logo"/><p>LinkedIn</p></div></a>
+            </div>
+            <div className="logout-button"><button onClick={logout}>Sign out of Mixflix</button></div>
+          </div>
+        </div>
+        
+      </div>
       {/* <h2 className="header-name">Hi, {currentUser.username}!</h2> */}
-      <button className="header-button" onClick={logout}>Log Out</button>
-    </hgroup>
+      {/* <button className="header-button" onClick={logout}>Log Out</button> */}
+    </div>
   );
 
-  return currentUser ? personalGreeting() : (currentPage === '/login') ? loginLinks() : (currentPage === '/signup') ? signupLinks() : landingLinks();
+  return currentUser ? loggedIn() : (currentPage === '/login') ? loginLinks() : (currentPage === '/signup') ? signupLinks() : landingLinks();
 };
 
 

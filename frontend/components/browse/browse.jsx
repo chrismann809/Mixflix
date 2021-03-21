@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Browse = ({currentUser, currentPage, logout}) => {
     return (
-        <div>hello</div>
+        <div>VIDEOS WILL GO HERE</div>
     )
 };
 
