@@ -4,11 +4,13 @@ import { Link } from 'react-router-dom';
 
 
 
-const Browse = ({currentUser, currentPage, logout}) => {
-    return (
-        <div>VIDEOS WILL GO HERE</div>
-    )
-};
+class Browse extends React.Component {
+    render() {
+        return(
+            <div>{}</div>
+        )
+    }
+}
 
 
 export default Browse;

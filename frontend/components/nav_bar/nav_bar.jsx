@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa'
 import { RiArrowDownSFill } from 'react-icons/ri'
-import { SiNetflix, SiGithub, SiLinkedin } from 'react-icons/si'
+import { SiGithub, SiLinkedin } from 'react-icons/si'
 
 
 const NavBar = ({currentUser, currentPage, logout, processForm}) => {
@@ -45,11 +45,10 @@ const NavBar = ({currentUser, currentPage, logout, processForm}) => {
       <div className="nav-right">
         <FaSearch id="search-icon"/>
         <div className="profile-dropdown">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"/>
+          <img src="https://pro2-bar-s3-cdn-cf1.myportfolio.com/dddb0c1b4ab622854dd81280840458d3/98032aebff601c1d993e12a0.png?h=eba99c47b726e04e1228d83852b69211"/>
           <RiArrowDownSFill id="dropdown-arrow"/>
           <div className="profile-dropdown-content">
             <div className="profile-links">
-              <a href="http://netflix.com/" id="profile-netflix-link"><div><SiNetflix id="profile-netflix-logo"/><p>Netflix</p></div></a>
               <a href="http://github.com/chrismann809/" id="profile-github-link"><div><SiGithub id="profile-github-logo"/><p>GitHub</p></div></a>
               <a href="http://linkedin.com/" id="profile-linkedin-link" ><div><SiLinkedin id="profile-linkedin-logo"/><p>LinkedIn</p></div></a>
             </div>
