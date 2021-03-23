@@ -32,7 +32,6 @@ class Browse extends React.Component {
         let action
         genres.forEach( (genre) => {if (genre[0] === "Action") action = genre[1] } )
         let mainMovie;
-        debugger
         // action.forEach( (movie) => {if (movie.title === "Batman Begins") mainMovie = movie } )
         mainMovie = action["Batman Begins"];
         return(
