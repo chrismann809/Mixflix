@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     resources :liked_movies, only: [:create, :destroy, :show]
   end
 
-  
+  resources :movies, only: :show
   
   root "static_pages#root"
 end

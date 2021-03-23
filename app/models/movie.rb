@@ -5,10 +5,12 @@ class Movie < ApplicationRecord
         foreign_key: :genre_id,
         class_name: :Genre
 
-    has_many :liked_movies,
+    has_many :list_linkers,
         foreign_key: :movie_id,
         class_name: :LikedMovie
 
     has_one_attached :video
+    has_one_attached :icon
+    has_one_attached :thumbnail
 
 end

@@ -1,11 +1,12 @@
-# @genres.each do |genre|
-#     json.key_format! ->(key){ key[0].upcase + key.slice(1..-1) }
-#     json.set! genre.name do 
-#         genre.movies.each do |movie|
-#             json.key_format! ->(key){ key }
-#             json.set! movie.title do
-#                 json.extract! movie, :id, :title, :description, :video_length, :genre_id
-#             end
-#         end
-#     end
-# end
+@genres.each do |genre|
+    json.set! genre.name do 
+        genre.movies.each do |movie|
+            json.set! movie.title do
+                json.extract! movie, :id, :title, :description, :video_length, :genre_id, :content_rating, :year
+                json.videoUrl movie.video.attached? ? url_for(movie.video) : null
+                json.icon movie.icon.attached? ? url_for(movie.icon) : null
+                json.thumbnail movie.thumbnail.attached? ? url_for(movie.thumbnail) : null
+            end
+        end
+    end
+end
