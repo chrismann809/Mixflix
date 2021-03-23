@@ -24,7 +24,7 @@ animation = Genre.create({name: 'Animation'})
 
 
 batman_begins = Movie.create({
-    title: 'Batman Begin',
+    title: 'Batman Begins',
     description: "As a toxic threat endangers a corrupt city, Bruce Wayne finds himself at odds with a league of assassins and forced to battle more than his own demons.",
     genre_id: action.id, 
     video_length: '2h 19m', 
