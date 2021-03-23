@@ -1,3 +1,10 @@
+.browse-container {
+    position: relative;
+    float: left;
+    /* overflow: hidden; */
+    width: 100%;
+}
+
 .main-movie {
     position: absolute;
     left: 0;
@@ -5,4 +12,25 @@
     width: 100%;
     height: auto;
     z-index: 0;
+}
+
+.main-movie-container {
+    position: relative;
+}
+
+.main-movie-icon {
+    position: relative;
+    margin-top: 17%;
+    left: 3.5%;
+    width: 20%;
+    height: auto;
+    z-index: 5;
+}
+
+.main-movie-thumb {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
 }

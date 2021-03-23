@@ -28,14 +28,17 @@ class Browse extends React.Component {
 
     render() {
         if (!this.props.genres[0]) return (<div></div>);
-        const movie = Object.values(this.props.genres[0][1])[0];
+        const mainMovieId = Math.floor(Math.random() * Object.values(this.props.genres[0][1]).length)
+        const movie = Object.values(this.props.genres[0][1])[mainMovieId];
         console.log(movie);
         return(
-            <div>
+            <div className="browse-container">
                 <div className="main-movie-container">
-                    <video className="main-movie" src={movie.videoUrl} autoPlay muted="true" onEnded={() => this.handleEnded()}></video>
+                    <video className="main-movie" src={movie.videoUrl} muted autoPlay onEnded={() => this.handleEnded()}></video>
+                    <img className="main-movie-icon" src={movie.icon} />
                 </div>
-                {(this.state.main_ended) ? <div className="main-movie-thumb"></div> : ""}
+                
+                {(this.state.main_ended) ? <img className="main-movie-thumb" src={movie.thumbnail} /> : ""}
             </div>
         )
     }
