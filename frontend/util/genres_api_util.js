@@ -1,6 +1,6 @@
-export const fetchGenres = () => {
-    return $.ajax({
+export const fetchGenres = () => (
+    $.ajax({
         url: "/api/genres",
         method: "GET"
     })
-}
+)

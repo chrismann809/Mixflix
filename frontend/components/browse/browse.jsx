@@ -1,8 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { RiMovie2Fill } from 'react-icons/ri';
 import { Link, NavLink } from 'react-router-dom';
 
+import MainMovieContainer from "../main_movie/main_movie_container"
+import BrowseGenre from "../browse_genre/browse_genre"
 
 
 class Browse extends React.Component {
@@ -17,7 +18,9 @@ class Browse extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchGenres()
+        this.props.fetchGenres();
+        if (this.props.currentUser.listId === "") window.location.reload();
+        this.props.receiveList(this.props.currentUser.listId);
     }
 
     handleEnded(mainMovie) {
@@ -27,21 +30,23 @@ class Browse extends React.Component {
     }
 
     render() {
-        const { genres } = this.props
-        if (!genres[0]) return (<div></div>);
-        let action
-        genres.forEach( (genre) => {if (genre[0] === "Action") action = genre[1] } )
-        let mainMovie;
+        const { genres, list } = this.props
+        if (!genres[0] || !list.id ) return (<div></div>);
+        debugger
+        let genreSections = [];
+
+        // if (list)
+
+        genres.forEach( (genre) => {
+            let movies = Object.entries(genre[1])
+            let genreName = genre[0]
+            debugger
+            let genreSection = (<BrowseGenre key={genreName} genreName={genreName} movies={movies} />)
+        })
         // action.forEach( (movie) => {if (movie.title === "Batman Begins") mainMovie = movie } )
-        mainMovie = action["Batman Begins"];
         return(
             <div className="browse-container">
-                <div className="main-movie-container">
-                    <video className="main-movie" src={mainMovie.videoUrl} muted autoPlay onEnded={() => this.handleEnded(mainMovie)}></video>
-                    <img className="main-movie-icon" src={mainMovie.icon} />
-                </div>
-                
-                {(this.state.mainEnded) ? <img className="main-movie-thumb" src={mainMovie.thumbnail} /> : ""}
+                <MainMovieContainer />
             </div>
         )
     }

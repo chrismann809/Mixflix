@@ -5,7 +5,9 @@ class Api::LikedMoviesController < ApplicationController
         list_id = params[:liked_movie][:list_id]
         @list = List.find(list_id)
 
-        render '/api/lists/show'
+        if @liked_movie.save!
+            render '/api/lists/show'
+        end
     end
 
     def destroy

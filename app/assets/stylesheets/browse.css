@@ -1,12 +1,17 @@
 .browse-container {
     position: relative;
     float: left;
-    /* overflow: hidden; */
-    width: 100%;
+    overflow: hidden;
+    margin-left: -10px;
+    margin-top: -10px;
+    width: 100vw;
+    border-bottom: 1px solid white;
 }
 
 .main-movie {
     position: absolute;
+    /* margin-top: -10px;
+    margin-left: -10px; */
     left: 0;
     top: 0;
     width: 100%;
@@ -20,17 +25,138 @@
 
 .main-movie-icon {
     position: relative;
-    margin-top: 17%;
-    left: 3.5%;
-    width: 20%;
+    margin-top: 21.7%;
+    width: 19%;
     height: auto;
     z-index: 5;
+    left: 4.1%;
 }
 
 .main-movie-thumb {
     position: absolute;
+    /* margin-top: -10px;
+    margin-left: -10px; */
     width: 100%;
     height: auto;
     top: 0;
     left: 0;
+}
+
+.main-movie-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 5;
+    margin-top: 2.9%;
+    padding-bottom: 4%;
+}
+
+.main-movie-buttons-left {
+    display: flex;
+    flex-direction: row;
+    margin-left: 4.2%;
+    width: 25%;
+}
+
+.main-movie-buttons-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 35%;
+}
+
+.main-movie-play, .main-movie-info, .main-movie-rating {
+    z-index: 5;
+}
+
+.main-movie-play, .main-movie-info {
+    font-weight: bold;
+    height: 65%;
+    border-radius: 5%;
+}
+
+.main-movie-play {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    color: black;
+    width: 32%;
+    margin-right: 4%;
+}
+
+.main-movie-play:hover, .main-movie-info:hover {
+    cursor: pointer;
+}
+
+.main-movie-info {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(124, 124, 124, 0.7);
+    color: white;
+    width: 45%;
+}
+
+.main-mute-on, .main-mute-off {
+    z-index: 10;
+}
+
+.main-muted-icon, .main-unmuted-icon {
+    border: white 1px solid;
+    border-radius: 50%;
+    padding: 0.4%;
+    top: 79%;
+    right: 11%;
+    width: 1.6vw;
+    height: 1.6vw;
+    position: absolute;
+}
+
+.main-muted-icon:hover, .main-unmuted-icon:hover {
+    cursor: pointer;
+    background-color: rgba(124, 124, 124, 0.7);
+}
+
+.main-movie-play p {
+    font-size: 1.3vw;
+    margin-top: 10%;
+    padding-bottom: 12%;
+    margin-left: 12%;
+}
+
+.main-play-icon {
+    width: 13%;
+    height: auto;
+    margin-left: 20%;
+}
+
+.main-movie-info p {
+    font-size: 1.3vw;
+    margin-top: 7%;
+    padding-bottom: 9%;
+    margin-left: 10%;
+}
+
+.main-info-icon {
+    width: 15%;
+    height: auto;
+    margin-left: 10%;
+}
+
+.main-movie-rating {
+    background-color: rgba(65, 65, 65, 0.7);
+    border-left: 3px solid white;
+    width: 9vw;
+    height: 50%;
+    margin-left: 5%;
+}
+
+.main-movie-rating:hover {
+    cursor: default;
+}
+
+.main-movie-rating p {
+    margin-right: 12px;
+    margin-top: 7%;
+    margin-left: 13%;
+    font-size: 1.3vw;
 }

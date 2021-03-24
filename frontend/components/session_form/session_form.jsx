@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { createList } from '../../actions/list_actions';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -15,10 +16,12 @@ class SessionForm extends React.Component {
 
     this.state = {
       username: email,
-      password: ''
+      password: '',
+      list_id: null
     };
 
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSubmitLogin = this.handleSubmitLogin.bind(this);
+    this.handleSubmitSignup = this.handleSubmitSignup.bind(this);
   }
 
   update(field) {
@@ -27,10 +30,20 @@ class SessionForm extends React.Component {
     });
   }
 
-  handleSubmit(e) {
+  handleSubmitLogin(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user);
+    this.props.processForm(user)
+  }
+
+  handleSubmitSignup(e) {
+    e.preventDefault();
+    const user = Object.assign({}, this.state);
+    this.props.processForm(user)
+      .then(currentUserInfo => {
+        const newListInfo = { user_id: currentUserInfo.currentUser.id }
+        this.props.createList(newListInfo)
+      })
   }
 
   renderErrors() {
@@ -49,10 +62,10 @@ class SessionForm extends React.Component {
     const loginForm = (
       <div className="login-form-container">
         <img className="login-back-img" src="https://i.imgur.com/BuTGdhU.png" alt=""/>
-        <form onSubmit={this.handleSubmit} className="login-form-box">
+        <form onSubmit={this.handleSubmitLogin} className="login-form-box">
           <div className="login-form">
             <h1>{"Sign In"}</h1>
-            {this.props.errors.length > 0 ? <p className="login-error"><strong>Incorrect password.</strong> Please try again or you can <u>reset your password.</u></p> : ""}
+            {this.props.errors.length > 0 ? <p className="login-error"><strong>Invalid credentials.</strong> Please try again.</p> : ""}
             <br/>
             <div className="session-input">
               <div>
@@ -86,7 +99,7 @@ class SessionForm extends React.Component {
     const signupForm = (
       <div className="signup-form-container">
         <div className="signup-back"></div>
-        <form onSubmit={this.handleSubmit} className="signup-form-box">
+        <form onSubmit={this.handleSubmitSignup} className="signup-form-box">
           <div className="signup-form">
             <div className="signup-text">
               <h2>Create a password to start your membership.</h2>
