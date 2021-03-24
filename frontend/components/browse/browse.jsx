@@ -32,7 +32,6 @@ class Browse extends React.Component {
     render() {
         const { genres, list } = this.props
         if (!genres[0] || !list.id ) return (<div></div>);
-        debugger
         let genreSections = [];
 
         // if (list)
@@ -40,7 +39,6 @@ class Browse extends React.Component {
         genres.forEach( (genre) => {
             let movies = Object.entries(genre[1])
             let genreName = genre[0]
-            debugger
             let genreSection = (<BrowseGenre key={genreName} genreName={genreName} movies={movies} />)
         })
         // action.forEach( (movie) => {if (movie.title === "Batman Begins") mainMovie = movie } )

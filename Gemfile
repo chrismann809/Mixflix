@@ -29,6 +29,8 @@ gem 'jquery-rails'
 
 gem "aws-sdk-s3"
 
+gem "mimemagic", '~> 0.3.5'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
