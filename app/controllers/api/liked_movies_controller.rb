@@ -21,7 +21,7 @@ class Api::LikedMoviesController < ApplicationController
     private
 
     def liked_movie_params
-        params.require(:list_movie).permit(:list_id, :movie_id)
+        params.require(:liked_movie).permit(:list_id, :movie_id)
     end
     
 end

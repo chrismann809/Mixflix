@@ -8,7 +8,7 @@ const mapStateToProps = ( { entities: { list }}) => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    addMovieToList: likedMovie => dispatch(addMovieToList(movie)),
+    addMovieToList: likedMovie => dispatch(addMovieToList(likedMovie)),
     removeMovieFromList: likedMovieId => dispatch(removeMovieFromList(likedMovieId))
 })
 

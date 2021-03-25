@@ -34,7 +34,24 @@ class Browse extends React.Component {
         if (!genres[0] || !list.id ) return (<div></div>);
         let genreSections = [];
 
-        // if (list)
+        // debugger
+        if (list.movies.length >= 1) {
+            let movies = []
+            // debugger
+            list.movies.forEach( (movie) => {
+                let movieItem = []
+                movieItem.push(movie.title);
+                movieItem.push(movie);
+                movies.push(movieItem);
+                // debugger
+            })
+            let genreName = "My List";
+            // debugger
+            let genreSection = (
+                <BrowseGenre key={genreName} genreName={genreName} movies={movies} />
+            )
+            genreSections.push(genreSection);
+        }
 
         genres.forEach( (genre) => {
             let movies = Object.entries(genre[1])

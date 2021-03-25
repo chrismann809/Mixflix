@@ -25,7 +25,7 @@ export const addMovieToList = movie => (
 export const removeMovieFromList = movieId => (
     $.ajax({
         url: `/api/liked_movies/${movieId}`,
-        method: "POST",
+        method: "DELETE",
         data: { movieId }
     })
 )

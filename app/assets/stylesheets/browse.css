@@ -185,6 +185,7 @@
     position: relative;
     font-size: 1.5vw;
     left: -96vw;
+    min-width: 18vw;
 }
 
 .browse-thumb {
@@ -267,13 +268,13 @@
 .browse-movie-right:checked ~ .browse-movies {
     position: relative;
     transition: 1s ease;
-    left: -173vw;
+    left: -187vw;
 }
 
 .browse-movie-left:checked ~ .browse-movies {
     transition: 1s ease;
     position: relative;
-    left: -96vw;
+    left: -110vw;
 }
 
 .browse-dummy {
@@ -290,8 +291,13 @@
 }
 
 .browse-play-icon {
-    height: 3vw;
-    margin-top: 1vw;
+    height: 1.5vw;
+    padding: 0.5vw;
+    width: auto;
+    margin-top: 2.2vw;
+    background-color: white;
+    border-radius: 50%;
+    margin-left: 0.5vw;
 }
 
 .active-movie-controls {
@@ -305,12 +311,14 @@
 }
 
 .browse-movie-controls {
-    background-color: gray;
+    background-color: rgb(48, 48, 48);
     height: 4vw;
     margin-top: -7vw;
     padding-bottom: 2vw;
-    -webkit-animation: fadein 2s;
+    -webkit-animation: fadein 1s;
     z-index: 10001;
+    display: flex;
+    flex-direction: row;
 }
 
 @keyframes fadein {
@@ -321,4 +329,14 @@
 @-webkit-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+.add-btn {
+    height: 1.5vw;
+    padding: 0.5vw;
+    width: auto;
+    margin-top: 2.2vw;
+    background-color: white;
+    border-radius: 50%;
+    margin-left: 0.5vw;
 }
