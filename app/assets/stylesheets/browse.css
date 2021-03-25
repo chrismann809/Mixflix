@@ -192,6 +192,7 @@
     width: 100%;
     height: auto;
     border-radius: 0.4vw;
+    z-index: 10000;
 }
 
 .browse-movies {
@@ -218,9 +219,10 @@
 
 .browse-icon {
     position: relative;
-    width: 100%;
-    top: -6vw;
-    left: 1vw;
+    width: 63%;
+    top: -5vw;
+    left: 0vw;
+    z-index: 100000;
 }
 
 .browse-movie-left {
@@ -244,7 +246,7 @@
     background-color: white;
     width: 2vw;
     height: 8.4vw;
-    z-index: 10;
+    z-index: 10000000;
     opacity: 50%;
     min-width: .5vw;
     margin-top: 3.3vw;
@@ -287,6 +289,11 @@
     background-color: white;
 }
 
+.browse-play-icon {
+    height: 3vw;
+    margin-top: 1vw;
+}
+
 .active-movie-controls {
     background-color: gray;
     margin-top: -50%;
@@ -295,4 +302,23 @@
 .browse-movie:hover {
     width: 22vw;
     transition: 1s ease;
+}
+
+.browse-movie-controls {
+    background-color: gray;
+    height: 4vw;
+    margin-top: -7vw;
+    padding-bottom: 2vw;
+    -webkit-animation: fadein 2s;
+    z-index: 10001;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }

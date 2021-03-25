@@ -32,7 +32,7 @@ batman_begins = Movie.create({
     content_rating: "PG-13"
 })
 
-# batman_begins.video.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/videos/action/batman-begins-video.mp4"), filename: "batman-begins-video.mp4")
+batman_begins.video.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/videos/action/batman-begins-video.mp4"), filename: "batman-begins-video.mp4")
 batman_begins.icon.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/icons/action/batman-begins-icon.png"), filename: "batman-begins-icon.png")
 batman_begins.thumbnail.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/thumbs/action/batman-begins-thumb.jpg"), filename: "batman-begins-thumb.jpeg")
 
@@ -47,7 +47,7 @@ the_dark_knight = Movie.create({
     content_rating: "PG-13"
 })
 
-# the_dark_knight.video.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/videos/action/the-dark-knight-video.mp4"), filename: "the-dark-knight-video.mp4")
+the_dark_knight.video.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/videos/action/the-dark-knight-video.mp4"), filename: "the-dark-knight-video.mp4")
 the_dark_knight.icon.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/icons/action/the-dark-knight-icon.png"), filename: "the-dark-knight-icon.png")
 the_dark_knight.thumbnail.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/thumbs/action/the-dark-knight-thumb.jpg"), filename: "the-dark-knight-thumb.jpeg")
 
@@ -61,7 +61,7 @@ code_8 = Movie.create({
     content_rating: "TV-MA"
 })
 
-# code_8.video.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/videos/action/code-8-video.mp4"), filename: "code-8-video.mp4")
+code_8.video.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/videos/action/code-8-video.mp4"), filename: "code-8-video.mp4")
 code_8.icon.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/icons/action/code-8-icon.png"), filename: "code-8-icon.png")
 code_8.thumbnail.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/thumbs/action/code-8-thumb.jpg"), filename: "code-8-thumb.jpeg")
 
@@ -76,7 +76,7 @@ enter_the_dragon = Movie.create({
     content_rating: "R"
 })
 
-# enter_the_dragon.video.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/videos/action/enter-the-dragon-video.mp4"), filename: "enter-the-dragon-video.mp4")
+enter_the_dragon.video.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/videos/action/enter-the-dragon-video.mp4"), filename: "enter-the-dragon-video.mp4")
 enter_the_dragon.icon.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/icons/action/enter-the-dragon-icon.png"), filename: "enter-the-dragon-icon.png")
 enter_the_dragon.thumbnail.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/thumbs/action/enter-the-dragon-thumb.jpg"), filename: "enter-the-dragon-thumb.jpeg")
 
@@ -91,7 +91,7 @@ ghost_rider = Movie.create({
     content_rating: "PG-13"
 })
 
-# ghost_rider.video.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/videos/action/ghost-rider-video.mp4"), filename: "ghost-rider-video.mp4")
+ghost_rider.video.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/videos/action/ghost-rider-video.mp4"), filename: "ghost-rider-video.mp4")
 ghost_rider.icon.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/icons/action/ghost-rider-icon.png"), filename: "ghost-rider-icon.png")
 ghost_rider.thumbnail.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/thumbs/action/ghost-rider-thumb.jpg"), filename: "ghost-rider-thumb.jpeg")
 
@@ -106,7 +106,7 @@ inception = Movie.create({
     content_rating: "PG-13"
 })
 
-# inception.video.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/videos/action/inception-video.mp4"), filename: "inception-video.mp4")
+inception.video.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/videos/action/inception-video.mp4"), filename: "inception-video.mp4")
 inception.icon.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/icons/action/inception-icon.png"), filename: "inception-icon.png")
 inception.thumbnail.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/thumbs/action/inception-thumb.jpg"), filename: "inception-thumb.jpeg")
 
@@ -121,7 +121,7 @@ parker = Movie.create({
     content_rating: "R"
 })
 
-# parker.video.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/videos/action/parker-video.mp4"), filename: "parker-video.mp4")
+parker.video.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/videos/action/parker-video.mp4"), filename: "parker-video.mp4")
 parker.icon.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/icons/action/parker-icon.png"), filename: "parker-icon.png")
 parker.thumbnail.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/thumbs/action/parker-thumb.jpg"), filename: "parker-thumb.jpeg")
 
@@ -136,7 +136,7 @@ quantum_of_solace = Movie.create({
     content_rating: "PG-13"
 })
 
-# quantum_of_solace.video.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/videos/action/quantum-of-solace-video.mp4"), filename: "quantum-of-solace-video.mp4")
+quantum_of_solace.video.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/videos/action/quantum-of-solace-video.mp4"), filename: "quantum-of-solace-video.mp4")
 quantum_of_solace.icon.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/icons/action/quantum-of-solace-icon.png"), filename: "quantum-of-solace-icon.png")
 quantum_of_solace.thumbnail.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/thumbs/action/quantum-of-solace-thumb.jpg"), filename: "quantum-of-solace-thumb.jpeg")
 
@@ -151,7 +151,7 @@ real_steel = Movie.create({
     content_rating: "PG-13"
 })
 
-# real_steel.video.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/videos/action/real-steel-video.mp4"), filename: "real-steel-video.mp4")
+real_steel.video.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/videos/action/real-steel-video.mp4"), filename: "real-steel-video.mp4")
 real_steel.icon.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/icons/action/real-steel-icon.png"), filename: "real-steel-icon.png")
 real_steel.thumbnail.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/thumbs/action/real-steel-thumb.jpg"), filename: "real-steel-thumb.jpeg")
 
@@ -166,7 +166,7 @@ sherlock_holmes = Movie.create({
     content_rating: "PG-13"
 })
 
-# sherlock_holmes.video.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/videos/action/sherlock-holmes-video.mp4"), filename: "sherlock-holmes-video.mp4")
+sherlock_holmes.video.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/videos/action/sherlock-holmes-video.mp4"), filename: "sherlock-holmes-video.mp4")
 sherlock_holmes.icon.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/icons/action/sherlock-holmes-icon.png"), filename: "sherlock-holmes-icon.png")
 sherlock_holmes.thumbnail.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/thumbs/action/sherlock-holmes-thumb.jpg"), filename: "sherlock-holmes-thumb.jpeg")
 
@@ -181,7 +181,7 @@ the_spy_next_door = Movie.create({
     content_rating: "PG"
 })
 
-# the_spy_next_door.video.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/videos/action/the-spy-next-door-video.mp4"), filename: "the-spy-next-door-video.mp4")
+the_spy_next_door.video.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/videos/action/the-spy-next-door-video.mp4"), filename: "the-spy-next-door-video.mp4")
 the_spy_next_door.icon.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/icons/action/the-spy-next-door-icon.png"), filename: "the-spy-next-door-icon.png")
 the_spy_next_door.thumbnail.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/thumbs/action/the-spy-next-door-thumb.jpg"), filename: "the-spy-next-door-thumb.jpeg")
 
@@ -196,7 +196,7 @@ paul_blart = Movie.create({
     content_rating: "PG"
 })
 
-# the_spy_next_door.video.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/videos/action/the-spy-next-door-video.mp4"), filename: "the-spy-next-door-video.mp4")
+the_spy_next_door.video.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/videos/action/the-spy-next-door-video.mp4"), filename: "the-spy-next-door-video.mp4")
 paul_blart.icon.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/icons/comedy/paul_blart_icon.png"), filename: "the-spy-next-door-icon.png")
 paul_blart.thumbnail.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/thumbs/comedy/paul_blart_thumb.jpg"), filename: "the-spy-next-door-thumb.jpeg")
 

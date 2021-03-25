@@ -59,8 +59,8 @@ export default class MainMovie extends React.Component {
                         <div className="main-movie-rating"><p>{mainMovie.content_rating}</p></div>
                     </div>
                 </div>
-                {/* {(this.state.mainEnded) ? <img className="main-movie-thumb" src={mainMovie.thumbnail} /> : ""} */}
-                <img className="main-movie-thumb" src={mainMovie.thumbnail} />
+                {(this.state.mainEnded) ? <img className="main-movie-thumb" src={mainMovie.thumbnail} /> : ""}
+                {/* <img className="main-movie-thumb" src={mainMovie.thumbnail} /> */}
 
             </div>
         )
