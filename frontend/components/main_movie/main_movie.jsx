@@ -42,7 +42,7 @@ export default class MainMovie extends React.Component {
 
 
         return (
-            <div>
+            <div className="main-movie-full">
                 <div className="main-movie-container">
                     {this.state.muted ? <video className="main-movie" src={mainMovie.videoUrl} autoPlay muted onEnded={() => this.handleEnded()}></video>
                     : <video className="main-movie" src={mainMovie.videoUrl} autoPlay onEnded={() => this.handleEnded()}></video>}

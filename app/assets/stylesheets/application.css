@@ -19,7 +19,9 @@
     cursor: pointer;
  }
  body {
-     color: white;
-     background-color: black;
-     font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100vw;
+    overflow-x: hidden;
  }

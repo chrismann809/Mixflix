@@ -39,12 +39,17 @@ class Browse extends React.Component {
         genres.forEach( (genre) => {
             let movies = Object.entries(genre[1])
             let genreName = genre[0]
-            let genreSection = (<BrowseGenre key={genreName} genreName={genreName} movies={movies} />)
+            let genreSection = (
+                <BrowseGenre key={genreName} genreName={genreName} movies={movies} />
+            )
+            genreSections.push(genreSection);
         })
+
         // action.forEach( (movie) => {if (movie.title === "Batman Begins") mainMovie = movie } )
         return(
             <div className="browse-container">
                 <MainMovieContainer />
+                <div  className="genre-rows">{genreSections}</div>
             </div>
         )
     }

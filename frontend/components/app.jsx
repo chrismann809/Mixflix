@@ -5,6 +5,7 @@ import SignupFormContainer from '../components/session_form/signup_form_containe
 import LandingPage from '../components/landing_page/landing_page';
 import BrowseContainer from '../components/browse/browse_container';
 import InfoBarContainer from '../components/info_bar/info_bar_container';
+import MoviePlayer from '../components/movie_player/movie_player'
 
 import { Route, Switch } from 'react-router';
 
@@ -22,6 +23,7 @@ const App = () => (
             <AuthRoute exact path="/login" component={LoginFormContainer}/>
             <AuthRoute exact path="/signup" component={SignupFormContainer}/>
             <ProtectedRoute exact path="/browse" component={BrowseContainer}/>
+            <ProtectedRoute exact path="/watch/:id" component={MoviePlayer}/>
         </Switch>
         <footer>
             <Switch>

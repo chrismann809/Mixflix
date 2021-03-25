@@ -187,6 +187,19 @@ the_spy_next_door.thumbnail.attach(io: open("https://s3.amazonaws.com/mixflix-aa
 
 
 
+paul_blart = Movie.create({
+    title: 'Paul Blart: Mall Cop',
+    description: "An overzealous security guard finds himself in over his head when he tries to thwart a criminal mastermind's plot to rob an entire shopping mall.",
+    genre_id: comedy.id, 
+    video_length: '1h 31m', 
+    year: 2009, 
+    content_rating: "PG"
+})
+
+# the_spy_next_door.video.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/videos/action/the-spy-next-door-video.mp4"), filename: "the-spy-next-door-video.mp4")
+paul_blart.icon.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/icons/comedy/paul_blart_icon.png"), filename: "the-spy-next-door-icon.png")
+paul_blart.thumbnail.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/thumbs/comedy/paul_blart_thumb.jpg"), filename: "the-spy-next-door-thumb.jpeg")
+
 test_user_list = List.create({user_id: test_user.id})
 
 test_user_liked_movies = LikedMovie.create({list_id: test_user_list.id, movie_id: the_dark_knight.id})
