@@ -242,6 +242,14 @@
     margin-left: -2vw;
 }
 
+.browse-movie-left:checked ~ .browse-left-label {
+    opacity: 0;
+}
+
+.browse-movie-right:checked ~ .browse-right-label {
+    opacity: 0;
+}
+
 .browse-left-label, .browse-right-label {
     display: inline-block;
     background-color: white;
@@ -274,7 +282,11 @@
 .browse-movie-left:checked ~ .browse-movies {
     transition: 1s ease;
     position: relative;
-    left: -110vw;
+    left: -109.5vw;
+}
+
+.main-movie-play p {
+    color: black;
 }
 
 .browse-dummy {
@@ -300,6 +312,10 @@
     margin-left: 0.5vw;
 }
 
+.browse-play-icon:hover {
+    background-color: rgba(238, 238, 238, 0.795);
+}
+
 .active-movie-controls {
     background-color: gray;
     margin-top: -50%;
@@ -311,14 +327,14 @@
 }
 
 .browse-movie-controls {
-    background-color: rgb(48, 48, 48);
+    background-color: rgb(26, 26, 26);
     height: 4vw;
     margin-top: -7vw;
     padding-bottom: 2vw;
-    -webkit-animation: fadein 1s;
     z-index: 10001;
     display: flex;
     flex-direction: row;
+    -webkit-animation: fadein 1s;
 }
 
 @keyframes fadein {
@@ -336,7 +352,12 @@
     padding: 0.5vw;
     width: auto;
     margin-top: 2.2vw;
-    background-color: white;
+    border: 1px solid white;
     border-radius: 50%;
     margin-left: 0.5vw;
+}
+
+.add-btn:hover {
+    background-color:rgba(68, 68, 68, 0.733);
+    cursor: pointer;
 }

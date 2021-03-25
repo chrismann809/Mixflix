@@ -50,13 +50,13 @@ export default class BrowseMovie extends React.Component {
         const { id, title, thumbnail, videoUrl, description, icon, content_rating, video_length, year } = data;
 
         let listButton = (
-            <IconContext.Provider value={{ color: "black" }} ><FiPlus className="add-btn" onClick={this.handleAddMovieToList}/></ IconContext.Provider>
+            <IconContext.Provider value={{ color: "white" }} ><FiPlus className="add-btn" onClick={this.handleAddMovieToList}/></ IconContext.Provider>
         )
 
         list.movie_linkers.forEach( (movieLinker) => {
             if (movieLinker.movie_id === data.id) { 
                 listButton = (
-                    <IconContext.Provider value={{ color: "black" }} ><FiMinus className="add-btn" onClick={() => this.handleRemoveMovieFromList(movieLinker.id)}/></ IconContext.Provider>
+                    <IconContext.Provider value={{ color: "white" }} ><FiMinus className="add-btn" onClick={() => this.handleRemoveMovieFromList(movieLinker.id)}/></ IconContext.Provider>
                 )
             }
         })
@@ -66,7 +66,7 @@ export default class BrowseMovie extends React.Component {
         return (
             <div className="browse-movie" onMouseEnter={this.toggleActive} onMouseLeave={this.toggleActive} >
                 <div className="browse-movie-container">
-                    <img className="browse-thumb" src={thumbnail} />
+                    { this.state.active ? <video className="browse-thumb" src={videoUrl} autoPlay muted ></video> : <img className="browse-thumb" src={thumbnail} />}
                     <img className="browse-icon" src={icon}/>
                 </div>
                 { this.state.active ? <div className="browse-movie-controls">
