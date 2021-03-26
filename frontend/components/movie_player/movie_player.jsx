@@ -1,4 +1,5 @@
 import React from "react";
+import { BsThreeDotsVertical } from "react-icons/bs";
 
 export default class MoviePlayer extends React.Component {
     constructor(props) {
@@ -8,15 +9,41 @@ export default class MoviePlayer extends React.Component {
         this.state = {
             title: title,
             description: description,
-            videoUrl: videoUrl
+            videoUrl: videoUrl,
+            paused: false,
+            muted: false
         }
+
+        this.video;
+
+        this.toggleMute = this.toggleMute.bind(this);
+        this.togglePlay = this.togglePlay.bind(this);
+    }
+
+    componentDidMount() {
+        this.video = document.getElementById("video");
+    }
+
+    toggleMute() {
+        this.setState({
+            muted: !this.state.muted
+        })
     }
     
+    togglePlay() {
+        this.state.paused ? this.video.play() : this.video.pause();
+
+        this.setState({
+            paused: !this.state.paused
+        })
+    }
+
     render() {
         // debugger
         return (
             <div className="video-container">
-                <video className="video" src={this.props.location.state.videoUrl} autoPlay/>
+                { this.state.muted ?  <video id="video" src={this.props.location.state.videoUrl} autoPlay muted onClick={this.togglePlay} /> : <video id="video" src={this.props.location.state.videoUrl} autoPlay onClick={this.togglePlay} /> }
+                {/* <video id="video" src={this.props.location.state.videoUrl} autoPlay/> */}
             </div>
         )
     }

@@ -128,3 +128,11 @@
 #home-link a:hover, #my-list-link a:hover {
     color: lightgray;
 }
+
+.back-arrow {
+    position: absolute;
+    top: 2vw;
+    left: 2vw;
+    width: 5vw;
+    height: auto;
+}

@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa'
 import { RiArrowDownSFill } from 'react-icons/ri'
 import { SiGithub, SiLinkedin } from 'react-icons/si'
+import { AiOutlineArrowLeft } from 'react-icons/ai'
+// import { Watching } from 'webpack';
 
 
 const NavBar = ({currentUser, currentPage, logout, processForm}) => {
@@ -62,7 +64,13 @@ const NavBar = ({currentUser, currentPage, logout, processForm}) => {
     </div>
   );
 
-  return currentUser ? loggedIn() : (currentPage === '/login') ? loginLinks() : (currentPage === '/signup') ? signupLinks() : landingLinks();
+  const watching = () => (
+    <div className="watching-nav">
+      <Link to="/browse" className="back-arrow"><AiOutlineArrowLeft /></Link>
+    </div>
+  )
+
+  return currentUser ? ((currentPage === '/browse' || currentPage === '/browse/my-list') ? loggedIn() : watching()) : (currentPage === '/login') ? loginLinks() : (currentPage === '/signup') ? signupLinks() : landingLinks();
 };
 
 

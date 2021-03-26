@@ -378,3 +378,11 @@
     background-color:rgba(68, 68, 68, 0.733);
     cursor: pointer;
 }
+
+.chev-right {
+    position: relative;
+}
+
+.chev-left {
+    position: relative;
+}
