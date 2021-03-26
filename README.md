@@ -3,7 +3,8 @@
 ## Mixflix
 
 - [Live site](http://aa-mixflix.herokuapp.com/#/)
-![image](https://user-images.githubusercontent.com/73470658/112643476-caf0ba80-8e1a-11eb-9bf1-68945d0a9a56.png)
+![image](https://user-images.githubusercontent.com/73470658/112643629-f2478780-8e1a-11eb-882c-b23ee84fe1dd.png)
+
 
 
 ## Technologies Used
