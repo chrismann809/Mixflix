@@ -40,7 +40,7 @@ export default class MainMovie extends React.Component {
         let muteButton;
         this.state.muted ? muteButton=(<div className="main-mute-off" onClick={this.toggleMute}><VscMute className="main-unmuted-icon"/></div>) 
          : muteButton=(<div className="main-mute-on" onClick={this.toggleMute}><VscUnmute className="main-muted-icon" /></div>)
-        debugger
+        // debugger
 
         return (
             <div className="main-movie-full">

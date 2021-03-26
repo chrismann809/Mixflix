@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import { GrPlayFill } from "react-icons/gr"
 import { FiPlus, FiMinus } from "react-icons/fi"
 import { IconContext } from "react-icons"
+import { VscMute, VscUnmute } from "react-icons/vsc";
 
 export default class BrowseMovie extends React.Component {
     constructor(props) {
@@ -10,18 +11,27 @@ export default class BrowseMovie extends React.Component {
 
         this.state = {
             active: false,
-            reload: false
+            reload: false,
+            muted: true
         }
 
         this.handleAddMovieToList = this.handleAddMovieToList.bind(this);
         this.handleRemoveMovieFromList = this.handleRemoveMovieFromList.bind(this);
         this.toggleActive = this.toggleActive.bind(this);
         this.redirectToMovie = this.redirectToMovie.bind(this);
+        this.toggleMute = this.toggleMute.bind(this);
+    }
+
+    toggleMute() {
+        this.setState({
+            muted: !this.state.muted
+        })
     }
 
     toggleActive() {
         this.setState({
-            active: !this.state.active
+            active: !this.state.active,
+            muted: true
         })
     }
 
@@ -66,7 +76,7 @@ export default class BrowseMovie extends React.Component {
         return (
             <div className="browse-movie" onMouseEnter={this.toggleActive} onMouseLeave={this.toggleActive} >
                 <div className="browse-movie-container">
-                    { this.state.active ? <video className="browse-thumb" src={videoUrl} autoPlay muted ></video> : <img className="browse-thumb" src={thumbnail} />}
+                    { this.state.active ? ( this.state.muted ? <video className="browse-thumb" src={videoUrl} autoPlay muted ></video> : <video className="browse-thumb" src={videoUrl} autoPlay ></video> ) : <img className="browse-thumb" src={thumbnail} />}
                     <img className="browse-icon" src={icon}/>
                 </div>
                 { this.state.active ? <div className="browse-movie-controls">
@@ -81,6 +91,7 @@ export default class BrowseMovie extends React.Component {
                         }
                     }}><GrPlayFill className="browse-play-icon" /></Link>
                     {listButton}
+                    {this.state.muted ? <VscMute className="browse-mute-btn" onClick={this.toggleMute} /> : <VscUnmute className="browse-mute-btn" onClick={this.toggleMute} />}
                 </div> : "" }
             </div>
         )
