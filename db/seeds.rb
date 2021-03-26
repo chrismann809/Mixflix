@@ -196,9 +196,9 @@ paul_blart = Movie.create({
     content_rating: "PG"
 })
 
-the_spy_next_door.video.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/videos/action/the-spy-next-door-video.mp4"), filename: "the-spy-next-door-video.mp4")
-paul_blart.icon.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/icons/comedy/paul_blart_icon.png"), filename: "the-spy-next-door-icon.png")
-paul_blart.thumbnail.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/thumbs/comedy/paul_blart_thumb.jpg"), filename: "the-spy-next-door-thumb.jpeg")
+paul_blart.video.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/videos/comedy/paul-blart-video.mp4"), filename: "paul-blart-video.mp4")
+paul_blart.icon.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/icons/comedy/paul_blart_icon.png"), filename: "paul-blart-icon.png")
+paul_blart.thumbnail.attach(io: open("https://s3.amazonaws.com/mixflix-aa-seeds/thumbs/comedy/paul_blart_thumb.jpg"), filename: "paul-blart-thumb.jpeg")
 
 test_user_list = List.create({user_id: test_user.id})
 
