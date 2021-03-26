@@ -2,7 +2,9 @@
 
 ## Mixflix
 
-- Live site: http://aa-mixflix.herokuapp.com/#/
+- [Live site](http://aa-mixflix.herokuapp.com/#/)
+![image](https://user-images.githubusercontent.com/73470658/112643476-caf0ba80-8e1a-11eb-9bf1-68945d0a9a56.png)
+
 
 ## Technologies Used
 - Ruby/Rails
