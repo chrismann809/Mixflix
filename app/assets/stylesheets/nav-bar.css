@@ -34,13 +34,15 @@
 }
 
 #search-icon {
+    opacity: 0%;
     margin-top: 10px;
     margin-right: 30px;
 }
 
-#search-icon:hover {
+/* #search-icon:hover {
+
     cursor: pointer;
-}
+} */
 
 .nav-left {
     margin-top: 17px;
@@ -73,7 +75,7 @@
 
 .profile-dropdown-content {
     display: none;
-    background: black;
+    background: rgba(29, 29, 29, 0.589);
 }
 
 .profile-dropdown:hover .profile-dropdown-content {
@@ -85,6 +87,7 @@
     z-index: 4;
     margin-top: 20px;
     margin-left: -84px;
+    border-radius: 2px;
 }
 
 .profile-dropdown-content a div {
