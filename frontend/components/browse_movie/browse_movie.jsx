@@ -38,7 +38,7 @@ export default class BrowseMovie extends React.Component {
 
     toggleActiveOff() {
         this.setState({
-            active: true,
+            active: false,
             muted: true
         })
     }
