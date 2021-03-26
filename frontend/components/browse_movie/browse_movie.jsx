@@ -17,7 +17,8 @@ export default class BrowseMovie extends React.Component {
 
         this.handleAddMovieToList = this.handleAddMovieToList.bind(this);
         this.handleRemoveMovieFromList = this.handleRemoveMovieFromList.bind(this);
-        this.toggleActive = this.toggleActive.bind(this);
+        this.toggleActiveOn = this.toggleActiveOn.bind(this);
+        this.toggleActiveOff = this.toggleActiveOff.bind(this);
         this.redirectToMovie = this.redirectToMovie.bind(this);
         this.toggleMute = this.toggleMute.bind(this);
     }
@@ -28,9 +29,16 @@ export default class BrowseMovie extends React.Component {
         })
     }
 
-    toggleActive() {
+    toggleActiveOn() {
         this.setState({
-            active: !this.state.active,
+            active: true,
+            muted: true
+        })
+    }
+
+    toggleActiveOff() {
+        this.setState({
+            active: true,
             muted: true
         })
     }
@@ -74,7 +82,7 @@ export default class BrowseMovie extends React.Component {
         // debugger
 
         return (
-            <div className="browse-movie" onMouseEnter={this.toggleActive} onMouseLeave={this.toggleActive} >
+            <div className="browse-movie" onMouseEnter={this.toggleActiveOn} onMouseLeave={this.toggleActiveOff} >
                 <div className="browse-movie-container">
                     { this.state.active ? ( this.state.muted ? <video className="browse-thumb" src={videoUrl} autoPlay muted ></video> : <video className="browse-thumb" src={videoUrl} autoPlay ></video> ) : <img className="browse-thumb" src={thumbnail} />}
                     <img className="browse-icon" src={icon}/>
