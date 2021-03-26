@@ -139,3 +139,21 @@
     width: 5vw;
     height: auto;
 }
+
+.footer-git {
+    position: relative;
+    margin-left: 5vw;
+    margin-bottom: -4%;
+    width: 2%;
+    height: auto;
+    opacity: 25%;
+}
+
+.footer-linked {
+    position: relative;
+    margin-left: 5vw;
+    margin-bottom: -4%;
+    width: 2%;
+    height: auto;
+    opacity: 25%;
+}
