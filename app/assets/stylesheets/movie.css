@@ -10,3 +10,66 @@
     height: 86%;
     width: 100vw;
 }
+
+.progress-bar-container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    bottom: 10%;
+}
+
+progress.progress-bar {
+    height: 3px;
+    width: 93vw;
+    margin-left: 1vw;
+}
+
+p.time-remaining {
+    margin-top: 2px;
+    margin-left: 1.5%;
+    font-size: 13px;
+}
+
+progress {
+    background: crimson;
+  }
+  
+  progress {
+    color: lightblue;
+  }
+  
+  progress::-webkit-progress-value {
+    background: lightblue;
+  }
+  
+  progress::-moz-progress-bar {
+    background: lightcolor;
+  }
+  
+  progress::-webkit-progress-value {
+    background: red;
+  }
+  
+  progress::-webkit-progress-bar {
+    background: gray;
+  }
+
+  .video-play, .video-volume {
+    position: absolute;
+    bottom: 6%;
+    left: 1vh;
+    width: auto;
+    height: 38px;
+}
+
+.video-volume{
+  left: 8vh;
+}
+
+.video-fullscreen {
+  position: absolute;
+  bottom: 6.5%;
+  right: 4vh;
+  width: auto;
+  height: 28px;
+}
