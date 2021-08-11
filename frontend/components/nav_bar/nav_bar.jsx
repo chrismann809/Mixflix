@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaSearch } from 'react-icons/fa'
 import { RiArrowDownSFill } from 'react-icons/ri'
 import { SiGithub, SiLinkedin } from 'react-icons/si'
 import { AiOutlineArrowLeft } from 'react-icons/ai'
@@ -35,6 +34,8 @@ const NavBar = ({currentUser, currentPage, logout, processForm}) => {
     </div>
   )
 
+  
+
   const loggedIn = () => (
     <div className="logged-in-nav">
       <div className="nav-left">
@@ -45,7 +46,6 @@ const NavBar = ({currentUser, currentPage, logout, processForm}) => {
         </div>
       </div>
       <div className="nav-right">
-        <FaSearch id="search-icon"/>
         <div className="profile-dropdown">
           <img src="https://pro2-bar-s3-cdn-cf1.myportfolio.com/dddb0c1b4ab622854dd81280840458d3/98032aebff601c1d993e12a0.png?h=eba99c47b726e04e1228d83852b69211"/>
           <RiArrowDownSFill id="dropdown-arrow"/>

@@ -4,6 +4,8 @@ import { GrPlayFill, GrCircleInformation } from "react-icons/gr";
 import { IconContext } from "react-icons";
 import { AiOutlineInfoCircle } from "react-icons/ai"
 import { Link } from "react-router-dom"
+import Modal from "react-modal"
+import InfoModal from "../info_modal/info_modal"
 
 export default class MainMovie extends React.Component {
     constructor(props) {
@@ -38,6 +40,8 @@ export default class MainMovie extends React.Component {
         // action.forEach( (movie) => {if (movie.title === "Batman Begins") mainMovie = movie } )
         mainMovie = action["Batman Begins"];
         let muteButton;
+        console.log(mainMovie);
+        // debugger
         this.state.muted ? muteButton=(<div className="main-mute-off" onClick={this.toggleMute}><VscMute className="main-unmuted-icon"/></div>) 
          : muteButton=(<div className="main-mute-on" onClick={this.toggleMute}><VscUnmute className="main-muted-icon" /></div>)
         // debugger
@@ -62,8 +66,9 @@ export default class MainMovie extends React.Component {
                             videoUrl: mainMovie.videoUrl
                         }
                     }}><GrPlayFill className="main-play-icon" /><p>Play</p></Link>
-                        <div className="main-movie-info"><IconContext.Provider value={{color: "white"}}><AiOutlineInfoCircle className="main-info-icon"/></IconContext.Provider><p>More Info</p></div>
+                        {/* <div className="main-movie-info"><IconContext.Provider value={{color: "white"}}><AiOutlineInfoCircle className="main-info-icon"/></IconContext.Provider><p>More Info</p></div> */}
                     </div>
+                    <InfoModal title={mainMovie.title} description={mainMovie.description} genre_id={mainMovie.genre_id} year={mainMovie.year} video_length={mainMovie.video_length} videoUrl={mainMovie.videoUrl} icon={mainMovie.icon} thumbnail={mainMovie.thumbnail} content_rating={mainMovie.content_rating} />
                     <div className="main-movie-buttons-right">
                         {muteButton}
                         <div className="main-movie-rating"><p>{mainMovie.content_rating}</p></div>

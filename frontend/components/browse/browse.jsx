@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Link, NavLink } from 'react-router-dom';
+import Modal from "react-modal";
 
 import MainMovieContainer from "../main_movie/main_movie_container"
 import BrowseGenre from "../browse_genre/browse_genre"
@@ -27,6 +28,10 @@ class Browse extends React.Component {
         this.setState({
             mainEnded: true
         })
+    }
+
+    openModal() {
+        setIsOpen(true);
     }
 
     render() {
